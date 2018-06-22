@@ -1,0 +1,24 @@
+{
+  "classPaths": {
+    "": [
+      "/jphp-core/jars/jphp-core-0.9.3-SNAPSHOT.jar",
+      "/jphp-core/jars/asm-all-5.2.jar",
+      "/jphp-runtime/jars/jphp-runtime-1.0.3.jar",
+      "/jphp-zend-ext/jars/gson-2.7.jar",
+      "/jphp-zend-ext/jars/jphp-zend-ext-0.9.3-SNAPSHOT.jar",
+      "/jphp-json-ext/jars/jphp-json-ext-0.9.3-SNAPSHOT.jar",
+      "/jphp-json-ext/jars/gson-2.7.jar",
+      "/jphp-gui-ext/jars/jphp-gui-ext-0.9.3-SNAPSHOT.jar",
+      "/jphp-xml-ext/jars/jphp-xml-ext-0.9.3-SNAPSHOT.jar",
+      "/jphp-graphic-ext/jars/jphp-graphic-ext-0.9.3-SNAPSHOT.jar",
+      "/jphp-richtextfx-ext/jars/x-flowless-0.6.jar",
+      "/jphp-richtextfx-ext/jars/x-undofx-1.4.0.jar",
+      "/jphp-richtextfx-ext/jars/x-wellbehavedfx-0.3.1.jar",
+      "/jphp-richtextfx-ext/jars/x-jphp-richtextfx-ext-1.0.0.jar",
+      "/jphp-richtextfx-ext/jars/x-reactfx-2.0-M5.jar",
+      "/jphp-richtextfx-ext/jars/x-richtextfx-0.8.2.jar"
+    ]
+  },
+  "includes": [],
+  "plugins": []
+}

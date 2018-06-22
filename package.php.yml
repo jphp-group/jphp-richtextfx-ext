@@ -1,0 +1,30 @@
+name: 'jphp-richtextfx-ext'
+version: '1.0.0'
+description: 'RichTextArea for jphp-gui-ext'
+
+plugins: [Gradle, Hub, Doc]
+
+deps:
+  jphp-runtime: '*'
+  jphp-gui-ext: '*'
+
+gradle:
+  deps:
+    - 'org.fxmisc.richtext:richtextfx:0.8.2'
+
+hub:
+  login: 'yousan4ik@gmail.com'
+
+config:
+  ignore:
+    - '/sandbox/**'
+    - '/.idea/**'
+    - '/*.iml'
+    - '/.git/**'
+    - '/package.hub.yml'
+
+doc:
+  url-prefix: https://github.com/jphp-group/jphp-richtextfx-ext/blob/master/api-docs/
+  langs:
+    en: English
+    ru: Русский
