@@ -1,4 +1,4 @@
 package pro.nearde.richtextfx.classes;
 
-public class UXInlineCssTextArea {
+public class UXGenericStyledArea {
 }
