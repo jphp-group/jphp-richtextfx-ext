@@ -8,13 +8,15 @@ import php.runtime.annotation.Reflection;
 import php.runtime.env.Environment;
 import php.runtime.reflection.ClassEntity;
 
-public class UXStyledTextAreaScrollPane extends UXRegion<VirtualizedScrollPane<GenericStyledArea>> {
+@Reflection.Name("UXVirtualizedScrollPane")
+@Reflection.Namespace("php\\gui")
+public class UXVirtualizedScrollPane extends UXRegion<VirtualizedScrollPane<GenericStyledArea>> {
 
-    public UXStyledTextAreaScrollPane(Environment env, VirtualizedScrollPane wrappedObject) {
+    public UXVirtualizedScrollPane(Environment env, VirtualizedScrollPane<GenericStyledArea> wrappedObject) {
         super(env, wrappedObject);
     }
 
-    public UXStyledTextAreaScrollPane(Environment env, ClassEntity clazz) {
+    public UXVirtualizedScrollPane(Environment env, ClassEntity clazz) {
         super(env, clazz);
     }
 

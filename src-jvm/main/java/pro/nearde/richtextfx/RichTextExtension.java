@@ -1,11 +1,15 @@
 package pro.nearde.richtextfx;
 
-import org.develnext.jphp.ext.javafx.classes.UXNode;
-import org.develnext.jphp.ext.javafx.classes.layout.UXRegion;
+import org.fxmisc.flowless.VirtualizedScrollPane;
+import org.fxmisc.richtext.GenericStyledArea;
+import org.fxmisc.richtext.InlineCssTextArea;
+import org.fxmisc.richtext.StyleClassedTextArea;
 import php.runtime.env.CompileScope;
 import php.runtime.ext.support.Extension;
+import pro.nearde.richtextfx.classes.UXGenericStyledArea;
 import pro.nearde.richtextfx.classes.UXInlineCssTextArea;
-import pro.nearde.richtextfx.classes.UXStyledTextAreaScrollPane;
+import pro.nearde.richtextfx.classes.UXStyleClassedTextArea;
+import pro.nearde.richtextfx.classes.UXVirtualizedScrollPane;
 
 public class RichTextExtension extends Extension {
 
@@ -16,7 +20,9 @@ public class RichTextExtension extends Extension {
 
     @Override
     public void onRegister(CompileScope compileScope) {
-        registerWrapperClass(compileScope, UXRegion.class, UXInlineCssTextArea.class);
-        registerWrapperClass(compileScope, UXNode.class, UXStyledTextAreaScrollPane.class);
+        registerWrapperClass(compileScope, GenericStyledArea.class, UXGenericStyledArea.class);
+        registerWrapperClass(compileScope, InlineCssTextArea.class, UXInlineCssTextArea.class);
+        registerWrapperClass(compileScope, StyleClassedTextArea.class, UXStyleClassedTextArea.class);
+        registerWrapperClass(compileScope, VirtualizedScrollPane.class, UXVirtualizedScrollPane.class);
     }
 }

@@ -1,15 +1,24 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ubuntu
- * Date: 22.07.18
- * Time: 17:25
- */
 
 namespace php\gui;
 
+use php\gui\layout\UXRegion;
 
-class UXVirtualizedScrollPane
+class UXVirtualizedScrollPane extends UXRegion
 {
+    /**
+     * @var double
+     */
+    public $scrollX;
 
+    /**
+     * @var double
+     */
+    public $scrollY;
+
+    /**
+     * UXVirtualizedScrollPane constructor.
+     * @param UXGenericStyledArea $area
+     */
+    public function __construct(UXGenericStyledArea $area) {}
 }

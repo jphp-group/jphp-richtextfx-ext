@@ -1,15 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ubuntu
- * Date: 22.07.18
- * Time: 17:24
- */
 
 namespace php\gui;
 
-
-class UXStyleClassedTextArea
+class UXStyleClassedTextArea extends UXGenericStyledArea
 {
-
+    public function setStyleClass(int $from, int $to, string $styledClass) : void {}
 }
