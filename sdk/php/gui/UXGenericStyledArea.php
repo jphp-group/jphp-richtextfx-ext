@@ -131,7 +131,7 @@ abstract class UXGenericStyledArea extends UXRegion
     public function appendText(string $text, string $style = null) : void {}
 
     /**
-     * @param callback $callback (int $line)
+     * @param callback $callback (int $line) return UXNode
      */
-    public function graphicFactory(callback $callback) : void {}
+    public function graphicFactory(callable $callback) : void {}
 }

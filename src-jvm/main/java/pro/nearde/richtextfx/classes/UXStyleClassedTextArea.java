@@ -7,7 +7,7 @@ import php.runtime.env.Environment;
 import php.runtime.reflection.ClassEntity;
 
 @Reflection.Name("UXStyleClassedTextArea")
-@Reflection.Namespace(JavaFXExtension.NS)
+@Reflection.Namespace("php\\gui")
 public class UXStyleClassedTextArea extends UXGenericStyledArea {
 
     public UXStyleClassedTextArea(Environment env, StyleClassedTextArea wrappedObject) {

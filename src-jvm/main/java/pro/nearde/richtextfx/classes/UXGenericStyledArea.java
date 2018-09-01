@@ -24,7 +24,7 @@ import java.util.Optional;
 import java.util.function.IntFunction;
 
 @Reflection.Name("UXGenericStyledArea")
-@Reflection.Namespace(JavaFXExtension.NS)
+@Reflection.Namespace("php\\gui")
 abstract public class UXGenericStyledArea extends UXRegion<GenericStyledArea> {
 
     public UXGenericStyledArea(Environment env, GenericStyledArea wrappedObject) {

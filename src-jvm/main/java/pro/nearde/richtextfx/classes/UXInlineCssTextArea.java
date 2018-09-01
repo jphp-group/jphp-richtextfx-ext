@@ -8,7 +8,7 @@ import php.runtime.env.Environment;
 import php.runtime.reflection.ClassEntity;
 
 @Reflection.Name("UXInlineCssTextArea")
-@Reflection.Namespace(JavaFXExtension.NS)
+@Reflection.Namespace("php\\gui")
 public class UXInlineCssTextArea extends UXGenericStyledArea {
 
     public UXInlineCssTextArea(Environment env, InlineCssTextArea wrappedObject) {

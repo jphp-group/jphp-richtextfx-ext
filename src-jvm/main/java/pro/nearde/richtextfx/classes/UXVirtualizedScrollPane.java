@@ -10,7 +10,7 @@ import php.runtime.env.Environment;
 import php.runtime.reflection.ClassEntity;
 
 @Reflection.Name("UXVirtualizedScrollPane")
-@Reflection.Namespace(JavaFXExtension.NS)
+@Reflection.Namespace("php\\gui")
 public class UXVirtualizedScrollPane extends UXRegion<VirtualizedScrollPane<GenericStyledArea>> {
 
     public UXVirtualizedScrollPane(Environment env, VirtualizedScrollPane<GenericStyledArea> wrappedObject) {
