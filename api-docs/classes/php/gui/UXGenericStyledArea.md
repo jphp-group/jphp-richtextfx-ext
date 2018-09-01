@@ -192,5 +192,5 @@ appendText(string $text, string|null $style): void
 
 ### graphicFactory()
 ```php
-graphicFactory(php\gui\callback $callback): void
+graphicFactory(callback $callback): void
 ```
