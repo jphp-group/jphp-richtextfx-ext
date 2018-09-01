@@ -5,7 +5,7 @@
 
 **Классы наследники**
 
-> [UXInlineCssTextArea](https://github.com/jphp-group/jphp-richtextfx-ext/blob/master/api-docs/classes/php/gui/UXInlineCssTextArea.ru.md), [UXStyleClassedTextArea](https://github.com/jphp-group/jphp-richtextfx-ext/blob/master/api-docs/classes/php/gui/UXStyleClassedTextArea.ru.md)
+> [UXStyleClassedTextArea](https://github.com/jphp-group/jphp-richtextfx-ext/blob/master/api-docs/classes/php/gui/UXStyleClassedTextArea.ru.md), [UXInlineCssTextArea](https://github.com/jphp-group/jphp-richtextfx-ext/blob/master/api-docs/classes/php/gui/UXInlineCssTextArea.ru.md)
 
 ---
 
@@ -39,6 +39,7 @@
 - `->`[`selectRange()`](#method-selectrange)
 - `->`[`insertText()`](#method-inserttext)
 - `->`[`appendText()`](#method-appendtext)
+- `->`[`graphicFactory()`](#method-graphicfactory)
 
 ---
 # Методы
@@ -183,4 +184,13 @@ insertText(int $index, string $text): void
 ### appendText()
 ```php
 appendText(string $text, string|null $style): void
+```
+
+---
+
+<a name="method-graphicfactory"></a>
+
+### graphicFactory()
+```php
+graphicFactory(php\gui\callback $callback): void
 ```
