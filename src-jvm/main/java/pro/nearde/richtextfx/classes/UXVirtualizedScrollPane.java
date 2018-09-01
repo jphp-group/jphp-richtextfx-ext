@@ -1,5 +1,6 @@
 package pro.nearde.richtextfx.classes;
 
+import org.develnext.jphp.ext.javafx.JavaFXExtension;
 import org.develnext.jphp.ext.javafx.classes.layout.UXRegion;
 import org.fxmisc.flowless.VirtualizedScrollPane;
 import org.fxmisc.richtext.GenericStyledArea;
@@ -9,7 +10,7 @@ import php.runtime.env.Environment;
 import php.runtime.reflection.ClassEntity;
 
 @Reflection.Name("UXVirtualizedScrollPane")
-@Reflection.Namespace("php\\gui")
+@Reflection.Namespace(JavaFXExtension.NS)
 public class UXVirtualizedScrollPane extends UXRegion<VirtualizedScrollPane<GenericStyledArea>> {
 
     public UXVirtualizedScrollPane(Environment env, VirtualizedScrollPane<GenericStyledArea> wrappedObject) {

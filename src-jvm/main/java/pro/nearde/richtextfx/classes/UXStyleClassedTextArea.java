@@ -1,12 +1,13 @@
 package pro.nearde.richtextfx.classes;
 
+import org.develnext.jphp.ext.javafx.JavaFXExtension;
 import org.fxmisc.richtext.StyleClassedTextArea;
 import php.runtime.annotation.Reflection;
 import php.runtime.env.Environment;
 import php.runtime.reflection.ClassEntity;
 
 @Reflection.Name("UXStyleClassedTextArea")
-@Reflection.Namespace("php\\gui")
+@Reflection.Namespace(JavaFXExtension.NS)
 public class UXStyleClassedTextArea extends UXGenericStyledArea {
 
     public UXStyleClassedTextArea(Environment env, StyleClassedTextArea wrappedObject) {

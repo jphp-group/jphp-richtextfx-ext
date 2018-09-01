@@ -15,7 +15,22 @@ public class RichTextExtension extends Extension {
 
     @Override
     public Status getStatus() {
-        return Status.BETA;
+        return Status.STABLE;
+    }
+
+    @Override
+    public String getName() {
+        return "RichTextFX";
+    }
+
+    @Override
+    public String[] getPackageNames() {
+        return new String[] { "gui" };
+    }
+
+    @Override
+    public String getVersion() {
+        return "1.2.0";
     }
 
     @Override

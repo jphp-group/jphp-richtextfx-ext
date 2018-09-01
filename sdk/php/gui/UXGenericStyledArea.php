@@ -129,4 +129,9 @@ abstract class UXGenericStyledArea extends UXRegion
      * @param string|null $style
      */
     public function appendText(string $text, string $style = null) : void {}
+
+    /**
+     * @param callback $callback (int $line)
+     */
+    public function graphicFactory(callback $callback) : void {}
 }

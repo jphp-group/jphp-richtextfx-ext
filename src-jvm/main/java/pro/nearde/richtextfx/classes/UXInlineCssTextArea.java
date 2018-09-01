@@ -1,5 +1,6 @@
 package pro.nearde.richtextfx.classes;
 
+import org.develnext.jphp.ext.javafx.JavaFXExtension;
 import org.fxmisc.richtext.GenericStyledArea;
 import org.fxmisc.richtext.InlineCssTextArea;
 import php.runtime.annotation.Reflection;
@@ -7,7 +8,7 @@ import php.runtime.env.Environment;
 import php.runtime.reflection.ClassEntity;
 
 @Reflection.Name("UXInlineCssTextArea")
-@Reflection.Namespace("php\\gui")
+@Reflection.Namespace(JavaFXExtension.NS)
 public class UXInlineCssTextArea extends UXGenericStyledArea {
 
     public UXInlineCssTextArea(Environment env, InlineCssTextArea wrappedObject) {
