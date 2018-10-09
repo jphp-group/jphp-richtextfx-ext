@@ -35,6 +35,16 @@ abstract public class UXGenericStyledArea extends UXRegion<GenericStyledArea> {
         super(env, clazz);
     }
 
+    interface WrappedInterface {
+        @Reflection.Property int tabSize();
+        @Reflection.Property boolean showGutter();
+        @Reflection.Property double lineHeight();
+
+        void showPopup();
+        void hidePopup();
+        void forgetHistory();
+    }
+
     @Override
     public GenericStyledArea getWrappedObject() {
         return (GenericStyledArea) __wrappedObject;
@@ -94,6 +104,16 @@ abstract public class UXGenericStyledArea extends UXRegion<GenericStyledArea> {
         return getWrappedObject().getText();
     }
 
+    @Reflection.Getter
+    public int getCaretOffset() {
+        return getWrappedObject().getCaretColumn();
+    }
+
+    @Reflection.Getter
+    public int getCaretLine() {
+        return getWrappedObject().getCurrentParagraph();
+    }
+
     @Reflection.Signature
     public void showParagraphInViewport(int paragraphInViewport)
     {
@@ -132,6 +152,11 @@ abstract public class UXGenericStyledArea extends UXRegion<GenericStyledArea> {
     @Reflection.Signature
     public void clearStyleOfParagraph(int paragraph) {
         getWrappedObject().clearStyle(paragraph);
+    }
+
+    @Reflection.Signature
+    public Bounds getCharacterBounds() {
+        return (Bounds) getWrappedObject().getCaretBounds().get();
     }
 
     @Reflection.Signature
@@ -239,5 +264,78 @@ abstract public class UXGenericStyledArea extends UXRegion<GenericStyledArea> {
                 return null;
             }
         });
+    }
+
+    @Reflection.Signature
+    public void scrollToPixel(double x, double y) {
+        getWrappedObject().scrollToPixel(x, y);
+    }
+
+    @Reflection.Signature
+    public void scrollBy(double deltaX, double deltaY) {
+        getWrappedObject().scrollBy(deltaX, deltaY);
+    }
+
+    @Reflection.Signature
+    public void moveTo(int line, int pos) {
+        getWrappedObject().moveTo(line, pos);
+    }
+
+    @Reflection.Signature
+    public void moveTo(int line) {
+        getWrappedObject().moveTo(line, getCaretOffset());
+    }
+
+    @Reflection.Signature
+    public void undo() {
+        try {
+            getWrappedObject().undo();
+        } catch (IllegalArgumentException e) {
+            ;//nop hotfix
+        }
+    }
+
+    @Reflection.Signature
+    public void redo() {
+        try {
+            getWrappedObject().redo();
+        } catch (IllegalArgumentException e) {
+            ;// nop hotfix
+        }
+    }
+
+    @Reflection.Signature
+    public void cut() {
+        getWrappedObject().cut();
+    }
+
+    @Reflection.Signature
+    public void copy() {
+        getWrappedObject().copy();
+    }
+
+    @Reflection.Signature
+    public void paste() {
+        getWrappedObject().paste();
+    }
+
+    @Reflection.Signature
+    public boolean canUndo() {
+        return getWrappedObject().isUndoAvailable();
+    }
+
+    @Reflection.Signature
+    public boolean canRedo() {
+        return getWrappedObject().isRedoAvailable();
+    }
+
+    @Reflection.Signature
+    public void jumpToLine(int line, int pos) {
+        try {
+            getWrappedObject().moveTo(getWrappedObject().position(line, pos).toOffset());
+        } catch (IndexOutOfBoundsException e) {
+            getWrappedObject().moveTo(getText().length());
+        }
+        getWrappedObject().requestFollowCaret();
     }
 }
