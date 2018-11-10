@@ -5,7 +5,7 @@
 
 **Классы наследники**
 
-> [UXStyleClassedTextArea](https://github.com/jphp-group/jphp-richtextfx-ext/blob/master/api-docs/classes/php/gui/UXStyleClassedTextArea.ru.md), [UXInlineCssTextArea](https://github.com/jphp-group/jphp-richtextfx-ext/blob/master/api-docs/classes/php/gui/UXInlineCssTextArea.ru.md)
+> [UXInlineCssTextArea](https://github.com/jphp-group/jphp-richtextfx-ext/blob/master/api-docs/classes/php/gui/UXInlineCssTextArea.ru.md), [UXStyleClassedTextArea](https://github.com/jphp-group/jphp-richtextfx-ext/blob/master/api-docs/classes/php/gui/UXStyleClassedTextArea.ru.md)
 
 ---
 
@@ -40,6 +40,17 @@
 - `->`[`insertText()`](#method-inserttext)
 - `->`[`appendText()`](#method-appendtext)
 - `->`[`graphicFactory()`](#method-graphicfactory)
+- `->`[`scrollToPixel()`](#method-scrolltopixel)
+- `->`[`scrollBy()`](#method-scrollby)
+- `->`[`moveTo()`](#method-moveto)
+- `->`[`undo()`](#method-undo)
+- `->`[`redo()`](#method-redo)
+- `->`[`cut()`](#method-cut)
+- `->`[`copy()`](#method-copy)
+- `->`[`paste()`](#method-paste)
+- `->`[`canUndo()`](#method-canundo)
+- `->`[`canRedo()`](#method-canredo)
+- `->`[`jumpToLine()`](#method-jumptoline)
 
 ---
 # Методы
@@ -193,4 +204,103 @@ appendText(string $text, string|null $style): void
 ### graphicFactory()
 ```php
 graphicFactory(callback $callback): void
+```
+
+---
+
+<a name="method-scrolltopixel"></a>
+
+### scrollToPixel()
+```php
+scrollToPixel(int $x, int $y): void
+```
+
+---
+
+<a name="method-scrollby"></a>
+
+### scrollBy()
+```php
+scrollBy(mixed $deltaX, mixed $deltaY): void
+```
+
+---
+
+<a name="method-moveto"></a>
+
+### moveTo()
+```php
+moveTo(int $line, int $pos): void
+```
+
+---
+
+<a name="method-undo"></a>
+
+### undo()
+```php
+undo(): void
+```
+
+---
+
+<a name="method-redo"></a>
+
+### redo()
+```php
+redo(): void
+```
+
+---
+
+<a name="method-cut"></a>
+
+### cut()
+```php
+cut(): void
+```
+
+---
+
+<a name="method-copy"></a>
+
+### copy()
+```php
+copy(): void
+```
+
+---
+
+<a name="method-paste"></a>
+
+### paste()
+```php
+paste(): void
+```
+
+---
+
+<a name="method-canundo"></a>
+
+### canUndo()
+```php
+canUndo(): boolean
+```
+
+---
+
+<a name="method-canredo"></a>
+
+### canRedo()
+```php
+canRedo(): boolean
+```
+
+---
+
+<a name="method-jumptoline"></a>
+
+### jumpToLine()
+```php
+jumpToLine(int $line, int $pos): void
 ```

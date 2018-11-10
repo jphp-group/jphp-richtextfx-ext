@@ -134,4 +134,26 @@ abstract class UXGenericStyledArea extends UXRegion
      * @param callback $callback (int $line) return UXNode
      */
     public function graphicFactory(callable $callback) : void {}
+
+    public function scrollToPixel(int $x, int $y) : void {}
+
+    public function scrollBy($deltaX, $deltaY) : void {}
+
+    public function moveTo(int $line, int $pos) : void {}
+
+    public function undo() : void {}
+
+    public function redo() : void {}
+
+    public function cut() : void {}
+
+    public function copy() : void {}
+
+    public function paste() : void {}
+
+    public function canUndo() : bool {}
+
+    public function canRedo() : bool {}
+
+    public function jumpToLine(int $line, int $pos) : void {}
 }
