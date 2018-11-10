@@ -1,5 +1,5 @@
 name: 'jphp-richtextfx-ext'
-version: '1.2.2'
+version: '1.2.3'
 description: 'RichTextArea for jphp-gui-ext'
 
 plugins: [Gradle, Hub, Doc]
@@ -10,7 +10,7 @@ deps:
 
 gradle:
   deps:
-    - 'org.fxmisc.richtext:richtextfx:0.8.2'
+    - 'org.fxmisc.richtext:richtextfx:0.9.1'
 
 hub:
   login: 'yousan4ik@gmail.com'

@@ -35,16 +35,6 @@ abstract public class UXGenericStyledArea extends UXRegion<GenericStyledArea> {
         super(env, clazz);
     }
 
-    interface WrappedInterface {
-        @Reflection.Property int tabSize();
-        @Reflection.Property boolean showGutter();
-        @Reflection.Property double lineHeight();
-
-        void showPopup();
-        void hidePopup();
-        void forgetHistory();
-    }
-
     @Override
     public GenericStyledArea getWrappedObject() {
         return (GenericStyledArea) __wrappedObject;
