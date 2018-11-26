@@ -3,13 +3,13 @@
 ---
 
 ## jphp-richtextfx-ext
-> версия 1.2.3, создано с помощью JPPM.
+> версия 1.2.4, создано с помощью JPPM.
 
 RichTextArea for jphp-gui-ext
 
 ### Установка
 ```
-jppm add jphp-richtextfx-ext@1.2.3
+jppm add jphp-richtextfx-ext@1.2.4
 ```
 
 ### АПИ

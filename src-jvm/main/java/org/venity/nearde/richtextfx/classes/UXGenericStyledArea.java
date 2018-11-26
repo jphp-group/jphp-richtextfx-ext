@@ -4,18 +4,13 @@ import javafx.geometry.Bounds;
 import javafx.scene.Node;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.IndexRange;
-import org.develnext.jphp.ext.javafx.JavaFXExtension;
 import org.develnext.jphp.ext.javafx.classes.UXNode;
 import org.develnext.jphp.ext.javafx.classes.layout.UXRegion;
 import org.fxmisc.richtext.GenericStyledArea;
-import php.runtime.Memory;
 import php.runtime.annotation.Reflection;
 import php.runtime.env.Environment;
 import php.runtime.invoke.Invoker;
-import php.runtime.memory.BinaryMemory;
 import php.runtime.memory.DoubleMemory;
-import php.runtime.memory.LongMemory;
-import php.runtime.memory.support.operation.IntegerMemoryOperation;
 import php.runtime.reflection.ClassEntity;
 
 import java.util.HashMap;
@@ -240,10 +235,7 @@ abstract public class UXGenericStyledArea extends UXRegion<GenericStyledArea> {
     }
 
     @Reflection.Signature
-    public void graphicFactory(Invoker callback)
-    {
-        if (callback == null) getWrappedObject().setParagraphGraphicFactory(null); else
-
+    public void setGraphicFactory(Invoker callback) {
         getWrappedObject().setParagraphGraphicFactory(new IntFunction<Node>() {
             @Override
             public Node apply(int line) {
@@ -256,6 +248,11 @@ abstract public class UXGenericStyledArea extends UXRegion<GenericStyledArea> {
                 return null;
             }
         });
+    }
+
+    @Reflection.Signature
+    public void clearGraphicFactory() {
+        getWrappedObject().setParagraphGraphicFactory(null);
     }
 
     @Reflection.Signature

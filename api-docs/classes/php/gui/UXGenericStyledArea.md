@@ -18,6 +18,8 @@
 - `->`[`caretPosition`](#prop-caretposition) : `int`
 - `->`[`selectedText`](#prop-selectedtext) : `string`
 - `->`[`selection`](#prop-selection) : `array`
+- `->`[`caretLine`](#prop-caretline) : `int`
+- `->`[`caretOffset`](#prop-caretoffset) : `int`
 
 ---
 
@@ -39,7 +41,8 @@
 - `->`[`selectRange()`](#method-selectrange)
 - `->`[`insertText()`](#method-inserttext)
 - `->`[`appendText()`](#method-appendtext)
-- `->`[`graphicFactory()`](#method-graphicfactory)
+- `->`[`setGraphicFactory()`](#method-setgraphicfactory)
+- `->`[`clearGraphicFactory()`](#method-cleargraphicfactory)
 - `->`[`scrollToPixel()`](#method-scrolltopixel)
 - `->`[`scrollBy()`](#method-scrollby)
 - `->`[`moveTo()`](#method-moveto)
@@ -199,11 +202,20 @@ appendText(string $text, string|null $style): void
 
 ---
 
-<a name="method-graphicfactory"></a>
+<a name="method-setgraphicfactory"></a>
 
-### graphicFactory()
+### setGraphicFactory()
 ```php
-graphicFactory(callback $callback): void
+setGraphicFactory(callback $callback): void
+```
+
+---
+
+<a name="method-cleargraphicfactory"></a>
+
+### clearGraphicFactory()
+```php
+clearGraphicFactory(): void
 ```
 
 ---

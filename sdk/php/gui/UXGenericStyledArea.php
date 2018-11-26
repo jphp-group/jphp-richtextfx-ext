@@ -43,6 +43,16 @@ abstract class UXGenericStyledArea extends UXRegion
     public $selection;
 
     /**
+     * @var int
+     */
+    public $caretLine;
+
+    /**
+     * @var int
+     */
+    public $caretOffset;
+
+    /**
      * @param int $from
      * @param int $to
      * @return string
@@ -133,7 +143,9 @@ abstract class UXGenericStyledArea extends UXRegion
     /**
      * @param callback $callback (int $line) return UXNode
      */
-    public function graphicFactory(callable $callback) : void {}
+    public function setGraphicFactory(callable $callback) : void {}
+
+    public function clearGraphicFactory() : void {}
 
     public function scrollToPixel(int $x, int $y) : void {}
 
