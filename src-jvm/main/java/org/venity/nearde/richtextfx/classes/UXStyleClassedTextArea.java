@@ -1,6 +1,5 @@
-package pro.nearde.richtextfx.classes;
+package org.venity.nearde.richtextfx.classes;
 
-import org.develnext.jphp.ext.javafx.JavaFXExtension;
 import org.fxmisc.richtext.StyleClassedTextArea;
 import php.runtime.annotation.Reflection;
 import php.runtime.env.Environment;

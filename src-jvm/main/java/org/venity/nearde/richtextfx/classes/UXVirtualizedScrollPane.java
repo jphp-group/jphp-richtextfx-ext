@@ -1,4 +1,4 @@
-package pro.nearde.richtextfx.classes;
+package org.venity.nearde.richtextfx.classes;
 
 import org.develnext.jphp.ext.javafx.JavaFXExtension;
 import org.develnext.jphp.ext.javafx.classes.layout.UXRegion;

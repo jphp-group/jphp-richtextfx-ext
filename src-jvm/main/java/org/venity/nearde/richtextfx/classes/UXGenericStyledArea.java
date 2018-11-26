@@ -1,4 +1,4 @@
-package pro.nearde.richtextfx.classes;
+package org.venity.nearde.richtextfx.classes;
 
 import javafx.geometry.Bounds;
 import javafx.scene.Node;
@@ -242,6 +242,8 @@ abstract public class UXGenericStyledArea extends UXRegion<GenericStyledArea> {
     @Reflection.Signature
     public void graphicFactory(Invoker callback)
     {
+        if (callback == null) getWrappedObject().setParagraphGraphicFactory(null); else
+
         getWrappedObject().setParagraphGraphicFactory(new IntFunction<Node>() {
             @Override
             public Node apply(int line) {

@@ -1,5 +1,5 @@
 # RichTextFX for jphp-gui-ext
-> Package version 1.2.3, RichTextFX version 0.9.1
+> Package version 1.2.4, RichTextFX version 0.9.2
 
 
 ### API documentation :
