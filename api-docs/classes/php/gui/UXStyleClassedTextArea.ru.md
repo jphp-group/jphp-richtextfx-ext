@@ -3,6 +3,10 @@
 - **класс** `UXStyleClassedTextArea` (`php\gui\UXStyleClassedTextArea`) **унаследован от** [`UXGenericStyledArea`](https://github.com/jphp-group/jphp-richtextfx-ext/blob/master/api-docs/classes/php/gui/UXGenericStyledArea.ru.md)
 - **исходники** `php/gui/UXStyleClassedTextArea.php`
 
+**Классы наследники**
+
+> [UXHighlightClassedTextArea](https://github.com/jphp-group/jphp-richtextfx-ext/blob/master/api-docs/classes/php/gui/UXHighlightClassedTextArea.ru.md)
+
 ---
 
 #### Методы

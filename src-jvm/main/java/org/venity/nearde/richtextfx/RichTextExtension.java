@@ -1,15 +1,14 @@
 package org.venity.nearde.richtextfx;
 
 import org.fxmisc.flowless.VirtualizedScrollPane;
+import org.fxmisc.richtext.CodeArea;
 import org.fxmisc.richtext.GenericStyledArea;
 import org.fxmisc.richtext.InlineCssTextArea;
 import org.fxmisc.richtext.StyleClassedTextArea;
-import org.venity.nearde.richtextfx.classes.UXGenericStyledArea;
-import org.venity.nearde.richtextfx.classes.UXInlineCssTextArea;
-import org.venity.nearde.richtextfx.classes.UXStyleClassedTextArea;
+import org.fxmisc.richtext.model.StyleSpansBuilder;
+import org.venity.nearde.richtextfx.classes.*;
 import php.runtime.env.CompileScope;
 import php.runtime.ext.support.Extension;
-import org.venity.nearde.richtextfx.classes.UXVirtualizedScrollPane;
 
 public class RichTextExtension extends Extension {
 
@@ -30,7 +29,7 @@ public class RichTextExtension extends Extension {
 
     @Override
     public String getVersion() {
-        return "1.2.0";
+        return "1.2.5";
     }
 
     @Override
@@ -38,6 +37,9 @@ public class RichTextExtension extends Extension {
         registerWrapperClass(compileScope, GenericStyledArea.class, UXGenericStyledArea.class);
         registerWrapperClass(compileScope, InlineCssTextArea.class, UXInlineCssTextArea.class);
         registerWrapperClass(compileScope, StyleClassedTextArea.class, UXStyleClassedTextArea.class);
+        registerWrapperClass(compileScope, CodeArea.class, UXHighlightClassedTextArea.class);
         registerWrapperClass(compileScope, VirtualizedScrollPane.class, UXVirtualizedScrollPane.class);
+
+        registerWrapperClass(compileScope, StyleSpansBuilder.class, UXStyleSpansBuilder.class);
     }
 }
