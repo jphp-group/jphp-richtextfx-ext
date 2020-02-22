@@ -1,18 +1,27 @@
 name: 'jphp-richtextfx-ext'
-version: '1.2.5'
+version: '1.3.1'
 description: 'RichTextArea for jphp-gui-ext'
 
 plugins: [Gradle, Hub, Doc]
 
 deps:
   jphp-runtime: '*'
-  jphp-gui-ext: '*'
-  jphp-gui-jfx-linux: '*'
+  jphp-gui-ext: ^3.0.0
+
+jfx:
+  version: 13.0.2
 
 gradle:
   deps:
-    - 'org.fxmisc.richtext:richtextfx:0.10.1'
-
+    - 'org.fxmisc.richtext:richtextfx:0.10.4'
+  providedDeps:
+    - 'org.openjfx:javafx-base:%jfx.version%:linux'
+    - 'org.openjfx:javafx-graphics:%jfx.version%:linux'
+    - 'org.openjfx:javafx-controls:%jfx.version%:linux'
+    - 'org.openjfx:javafx-fxml:%jfx.version%:linux'
+    - 'org.openjfx:javafx-media:%jfx.version%:linux'
+    - 'org.openjfx:javafx-swing:%jfx.version%:linux'
+    -
 hub:
   login: 'yousan4ik@gmail.com'
 
